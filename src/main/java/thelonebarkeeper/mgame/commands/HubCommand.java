@@ -22,12 +22,12 @@ public class HubCommand extends Command {
         }
         ProxiedPlayer player = (ProxiedPlayer) sender;
 
-        if (player.getServer().getInfo().getName().equalsIgnoreCase("skywars-lobby")) {
+        if (player.getServer().getInfo().getName().equalsIgnoreCase("SW-LOBBY")) {
             player.sendMessage(new ComponentBuilder("Вы уже находитесь в хабе.").color(ChatColor.RED).create());
             return;
         }
 
-        ServerInfo target = ProxyServer.getInstance().getServerInfo("skywars-lobby");
+        ServerInfo target = ProxyServer.getInstance().getServerInfo("SW-LOBBY");
         player.connect(target);
 
     }

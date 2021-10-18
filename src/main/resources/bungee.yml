@@ -1,7 +1,8 @@
 name: SkyWarsProxy
 version: '${project.version}'
 main: thelonebarkeeper.mgame.SkyWarsProxy
-description: proxy plugin
+author: oofxFrozen
+description: sw proxy plugin
 commands:
   test:
     description: testcommand

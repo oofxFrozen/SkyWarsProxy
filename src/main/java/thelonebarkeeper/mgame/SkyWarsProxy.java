@@ -1,7 +1,6 @@
 package thelonebarkeeper.mgame;
 
 import net.md_5.bungee.api.plugin.Plugin;
-import thelonebarkeeper.mgame.commands.HubCommand;
 import thelonebarkeeper.mgame.listeners.PluginMessageListener;
 
 public final class SkyWarsProxy extends Plugin {
@@ -34,14 +33,14 @@ public final class SkyWarsProxy extends Plugin {
 
         getProxy().getPluginManager().registerListener(this, new PluginMessageListener());
 
-        getProxy().getPluginManager().registerCommand(this, new HubCommand("hub"));
-        getProxy().getPluginManager().registerCommand(this, new HubCommand("lobby"));
+//        getProxy().getPluginManager().registerCommand(this, new HubCommand("hub"));
+//        getProxy().getPluginManager().registerCommand(this, new HubCommand("lobby"));
 
     }
 
     public void setupServers() {
         for (int i = 1; i <= 9; i++) {
-            PluginMessageListener.serverAvailabilities.put(("skywars-" + i), true);
+            PluginMessageListener.serverAvailabilities.put(("SW-" + i), true);
         }
     }
 
